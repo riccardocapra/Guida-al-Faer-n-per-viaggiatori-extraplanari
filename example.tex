@@ -1,0 +1,653 @@
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+%1. To load a language with babel:
+%	\usepackage[<lang>]{babel}
+%2. To load a language with polyglossia:
+%	\usepackage{polyglossia}
+%	\setdefaultlanguage{<lang>}
+\usepackage[italian]{babel}
+%\usepackage[italian]{babel}
+% For further options (multilanguage documents, hypenations, language environments...)
+% please refer to babel/polyglossia's documentation.
+
+\usepackage[utf8]{inputenc}
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{shortvrb}
+\usepackage{stfloats}
+
+\captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
+
+\MakeShortVerb{|}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+  breaklines=true,
+}
+
+\title{Guida al Faerûn per viaggiatori extraplanari \\
+\large Una ambientazione per la Quinda Edizione di DnD}
+\author{Riccardo Capra}
+\date{01/09/2019}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+
+\mainmatter%
+
+\chapter{Introduzione}
+
+\DndDropCapLine{L}a idea per questa campagna nacque quando il mio gruppo di amici iniziò ad entrare nel mondo dei giochi da tavolo. A turno provammo a masterare le nostre sessioni ed alla fine a me spettò l'onore di diventare il DM a tempo pieno della compagnia. Questo libro non ha nessuna pretesa di originalità ed il suo scopo principale è quello di raccogliere ordinatamente i miei appunti e renderli eventualmente fruibili a chi fosse interessato a scoprire il mondo in cui per alcuni anni abbiamo vissuto le nostre storie.
+
+\section{Sulla Ambientazione}
+I luoghi descritti in questo manuale potrebbero risultare noti a molti di voi, città famigerate come Waterdeep o Baldur's Gate sono molto ben conosciute dai giocatori della 5e che potranno facilmente notare come la parte centrale del mondo sia costituita dai Forgotten Realms del 1497 CV. Le città di Kalsgard, Azir e Promise prendono i loro nomi dalle omonime metropoli di Golarion, l'ambientazione ufficiale di Pathfinder, perchè Pathfinder fu il primo gioco da tavolo che provammo con la mia compagnia. La parte Nord del mondo è basata su quella dell'ambientazione della espansione per la 5e "Journey To Ragnarok" mentre le regioni di Azir all'estremo sud e le isole di Promise ad Ovest sono state create da zero.
+Il motivo di questa mescolanza di mondi diversi è il voler offrire ai giocatori una vasta scelta su dove vivere le proprie avventure; vorranno essere pirati che navigano attorno a Promise? Combattere i potenti oligarchi di Azir nell'arido deserto? Intraprendere dure spedizioni tra i ghiacci e le tempeste di neve di Kalsgard? O vivere delle avventure metropolitane in aree ben conosciute come Neverwinter? Si spera che con la varietà di opzioni disponibili tutti i giocatori possano trovare l'avventura che cercano.
+
+\section{Storia del mondo}
+
+Questo libro è ambientato nel 1497 CV, per la parte di ambientazione dei Forgotten Realms si faccia riferimento agli eventi accaduti fino a questa data.
+
+L'evento principale su cui questo manuale si concentrerà sarà la cosiddetta "Guerra delle catene", un conflitto che da secoli imperversa tra le nazioni di Promise, Azir e Kalsgard mentre le città costiere rimangono neutrali. Il conflitto si trascina da quasi un secolo con intensità differenti ma alcuni sviluppi recenti sembrano averlo riacceso ed i partecipanti sono decisi a terminarlo una volta per tutte.
+
+La guerra iniziò nel 1384 DR quando un avamposto commerciale del regno di Azir chiamato Promise si ribellò rendendosi indipendente ed iniziò ad ostacolare in ogni modo la tratta di schiavi che in precedenza usava la città come scalo principale. Votata alla causa della libertà per ogni essere coinvolto dalla tratta, la nuova Promise creò uno statuto che concedesse la libertà ad ogni schiavo che l'avesse raggiunta. Subito dopo, con le navi che avevano a disposizione, iniziarono una vigorosa lotta sui mari commettendo atti di pirateria volti a catturare nuove navi schiaviste, liberando gli ostaggi e saccheggiando ogni bottino. 
+
+La neonata città aveva urgente bisogno di risorse ed alleati se voleva sperare di sopravvivere e quindi il concilio che aveva organizzato la rivolta e guidato la città fino a quel momento decise di rendere legale il commercio di ogni tipo di prodotti o artefatti nella città e consentì la pratica e lo studio di ogni scuola di magia finché non danneggiasse gli abitanti. Questi provvedimenti procurarono un rapido sviluppo economico per la città e sebbene la maggior parte delle città della costa ufficialmente non appoggiava direttamente Promise ed i suoi affari, molti governi esteri usarono questo luogo come posto dove sviluppare tecnologie e magie o ottenere merci bandite dalle loro stesse leggi.
+
+In seguito al successo di queste decisioni la città libera crebbe rapidamente ed iniziò a stringere alleanze o trattati di non interferenza con molte potenze estere ed organizzazioni para-governative interessate a mantenere l'esistenza di questo porto sicuro per ogni commerciante o ricercatore.
+
+La lontananza tra Promise ed i regni di Azir e Kalsgard fece sì che il conflitto si svolgesse per molto tempo prevalentemente tramite atti di pirateria ma nel 1494 DR alcuni studiosi aziriani scoprirono l'esistenza di un artefatto chiamato il Faro di Vernjud che si diceva in grado di garantire la supremazia marittima a chi lo avesse posseduto. Tra le tre nazioni iniziò una spietata caccia al tesoro e nel 1496 CV, mentre la flotta di Promise sembrava vicina ad ottenere il Faro, le nazioni alleate approfittarono della sua mancanza per assediare la città e cercare di conquistarla mentre una forza minore dava la caccia alle navi nemiche sparse e divise per l'oceano.
+
+L'assedio subito dalla città fu duro e durò quasi un mese ma improvvisamente un enorme creatura marina con tentacoli alti come palazzi attaccò la flotta assediante devastandola e salvando gli assediati.
+
+Al momento Kalsgard ed Azir si sono ritirate per leccarsi le ferite e cercare di sopperire alle perdite subite. A Kalsgard la sconfitta ha reso la nazione più vulnerabile alle invasioni provenienti da un regno a Sud, la Franchia, una nazione di Hobgoblin decisa a conquistare più terre possibili per la gloria del loro Dio Maglubiyet. Nel deserto di Azir gli oligarchi che guidano il regno hanno iniziato ad assumere mercenari da ogni terra ed evocare ogni terrore immaginabile da ogni angolo dell'universo per porre fine alla guerra e distruggere il nemico; ciò ha scatenato una ribellione guidata dalle tribù nomadi del deserto, sconcertate dalla scelleratezza degli arcimaghi ed orrorificati dalle aberrazioni ora che vagano per il deserto del regno.
+
+\chapter{Regni e Nazioni}
+Prima di entrare nel dettaglio di città, villaggi, persone di interesse ed idee per missioni diamo un occhiata alle nazioni di questo mondo in generale.
+
+\section{Azir}
+Collocato a Sud del mondo, il regno di Azir è stato creato in un vasto deserto. In antichità solo alcune tribù nomadi vivevano in questa sterminata distesa di sabbia ma intorno al 540 DR una delle civiltà nomadi più grandi si rifugiò in una serie di grotte per ripararsi da una forte tempesta che imperversava da giorni. Con acqua e provviste che iniziavano a scarseggiare alcuni membri si offrirono di esplorare le profondità dei cunicoli in ricerca di risorse utili alla sopravvivenza. Questi esploratori tornarono dopo qualche giorno in numero molto ridotto rispetto alla partenza ma parlarono di una serie di antiche rovine nascoste sotto le sabbie appartenenti ad una antica civiltà e contenenti artefatti magici e ricchezze oltre ogni immaginazione. Di lì a poco la tempesta si placò rapidamente ed i nomadi si divisero in due gruppi. Il primo gruppo continuò la vita nel deserto spostandosi costantemente e vivendo a stretto contatto con la natura mentre il secondo si stabilì nelle rovine, che diverranno in futuro la città di Nanoshen, e continuò a portare alla luce porzioni sempre maggiori di rovine insediandosi in esse e diventando i primi Aziriani.
+
+In seguito, guidati da antichi testi che avevano trovato o sotto il suggerimento di entità con cui avevano stretto degli accordi, gli Aziriani scoprirono e fondarono nuove città appoggiandosi principalmente sull'uso della magia per sopravvivere e prosperare. I praticanti arcani divenirono sempre più rilevanti fino a chè non arrivarono a controllare ogni aspetto della vita del regno rendendolo in pratica una oligarchia dove ai vertici siedono gli arcimaghi più potenti. Il resto degli abitanti trovò un fiorente futuro nel commercio, i prodotti del deserto e questi artefatti suscitavano interesse da parte delle nazioni vicine e quindi gli affari andarono bene rendendo ottimi profitti fino ai giorni nostri.
+
+La società è divisa in due parti, da un lato i ricchi mercanti e gli arcimaghi che vivono nel lusso e possono pagarsi una via d'uscita da ogni situazione e dall'altra le persone comuni che conducono una vita relativamente normali finché non diventano una minaccia per gli oligarchi. Alla fine della piramide sociale ci sono gli schiavi, spesso acquistati da mercanti dell'underdark o prigionieri di guerra questi individui non hanno diritti ed i padroni hanno su di essi potere di vita e di morte.
+
+Il clima nel deserto è estremamente caldo e secco arrivando fino a 45° in alcune aree, i viaggiatori che desiderano avventurarvici necessitano buone scorte di acqua e cibo, le oasi principali sono conosciute e mappate ma spesso usate da banditi per aggredire gruppi di viaggiatori inermi. Le tribù del deserto conoscono luoghi per sostare più sicuri ma mantengono queste conoscenze il più segrete possibili. Di notte la temperatura cala di molto toccando i 5° e costringendo i viaggiatori a coprirsi bene per dormire. In alcune delle aree più benestanti delle città sono stati lanciati degli incantesimi per rendere la temperatura più stabile e sopportabile.
+
+L'atteggiamento degli abitanti verso i viaggiatori dipende da dove ci si trova, le tribù nomadi sebbene non cerchino contatti con i viaggiatori normalmente si offrono di aiutare i gruppi che vedono in difficoltà mentre nelle città le persone sono più ospitali e cercano sempre di stringere un buon accordo con le persone che arrivano dall'esterno del regno. 
+
+\section{Kalsgard}
+Il regno di Kalsgard, o regno dei Linndorm come viene talvolta chiamato da alcuni, si trova all'estremo Nord del mondo. Il regno è diviso in una serie di Clan, ognuno con il suo Re ma tutti questi Clan sono subordinati alle decisioni del Clan principale, l'Occhio di Ohdin con sede nella città di Kalsgard, e del suo Re.
+
+La società è divisa in varie classi, ci sono i nobili, gli uomini fidati, i guerrieri, i lavoratori, i razziatori, gli schiavi ed i reietti. Gli schiavi sono prigionieri di guerra, persone ridotte in schiavitù per debiti o schiavi acquistati da Azir. Normalmente vengono trattati al pari degli animali della famiglia e si cerca di evitare di ucciderli inutilmente facendoli aiutare nelle faccende domestiche. Sotto gli schiavi ci sono i reietti, criminali o eretici banditi dalla società a cui è proibito dare asilo e che chiunque è autorizzato ad uccidere a vista.
+
+Le persone che hanno vissuto in queste zone si sono sempre riunite in Clan per sopravvivere, la vita è dura e ci sono molte bestie nelle foreste, sulle montagne o nei cieli che ogni giorno possono attentare alla vita di chi abita.
+
+Prima che i regni come sono conosciuti ora si formassero gli insediamenti principali erano costruiti vicino ad alcune roccaforti di giganti, questi ultimi tolleravano la presenza di questi coloni impiegandoli come forza lavoro o assoldando i più valorosi come guerrieri per aiutarli nel combattere i loro nemici giurati, i draghi. Dopo alcuni secoli sia il potere dei giganti che quello dei draghi andò scemando e fu il turno degli umanoidi di costruire nuove città e formare il loro regno. La maggior parte dei giganti si ritirò nelle fortezze limitando gli scambi al minimo e rimanendo vigili in caso gli antichi nemici fossero ricomparsi.
+
+Il clima nel regno è rigido, le città sulla costa in estate toccano i 18° nelle giornate più calde mentre nelle steppe gelide all'interno la temperatura può arrivare a -40°. Raramente i viaggiatori intraprendono viaggi che non passano per la rete di villaggi e stazioni di rifornimento dove i viandanti sono in grado di scaldarsi e mangiare senza contendersi il cibo con l'affamata fauna locale.
+
+Gli abitanti dei regni di Kalsgard sono solitamente riservati e schivi con gli stranieri ma una volta guadagnata la loro fiducia si rivelano essere persone estremamente leali ed altruiste. L'ospitalità pur essendo un valore centrale della società raramente va oltre al prestare un riparo e del cibo ad un gruppo di avventurieri sperduti e chi è in grado di ripagarla in qualche modo riscuote spesso il rispetto di chi lo ha aiutato. 
+
+\section{La Costa della spada}
+
+Le città della Costa della spada non sono unificate sotto una guida comune ma dopo alcuni periodi intermittenti di conflitti tra loro hanno da qualche tempo raggiunto un accordo che consente alle metropoli di collaborare senza conflitti e senza interferire nei reciproci interessi.
+
+La Costa della spada offre molte opportunità per chi abbia il coraggio e le capacità per afferrarle. Da ogni zona del mondo giovani ed intraprendenti avventurieri si incontrano in ogni giorno in improbabili gruppi nelle città e nei villaggi della costa per imbarcarsi in imprese incredibili e pericolose nella speranza di ottenere fama, fortuna, potere o qualsiasi altra cosa stiano cercando.
+
+La società nelle città è da qualche secolo ferma sulla divisione tra lavoratori, classi borghesi e nobiltà. Sebbene ogni tanto ci siano degli attriti tra queste classi normalmente vengono risolti senza spargimenti di sangue. Normalmente la legge tende a non fare distinzioni quando si tratta di giudicare qualcuno.
+
+Gli insediamenti di umanoidi in questa area hanno una storia di migliaia di anni, civiltà sono nate e crollate per fare spazio a nuove, non c'è un giorno in cui delle antiche rovine non vengano scoperte o oggetti che si credevano scomparsi o banditi ritornino alla luce dopo secoli di dormienza. I governi che gestiscono la vita quotidiana sono impegnati ogni giorno ad assumere e gestire persone che si offrano volontarie per intrepide missioni ed altrettanto fanno tutte le organizzazioni religiose, scientifiche o criminali che vivono parallelamente alle istituzioni civili.
+
+Il dinamismo che contraddistingue la Costa unito alla sua posizione centrale fa si che essa sia il centro principale per chiunque voglia commerciare o stia cercando di fare fortuna.
+
+Il clima è mediterraneo, d'estate la temperatura tocca i 38° e l'inverno si possono raggiungere i -10° nei giorni estremamente freddi ma normalmente la presenza del mare tende a mitigare gli effetti meteorologici e la rende un posto adatto alla vita della maggior parte delle razze umanoidi.
+
+L'atteggiamento degli abitanti varia molto in base alla città ed alla zona in cui ci si trova, alcune persone saranno felici di accogliere ed aiutare gli avventurieri mentre altre cercheranno di usarli a loro vantaggio tradendoli alla prima occasione buona. Una pratica divenuta ormai comune per ogni città e villaggio è affiggere su una bacheca pubblica annunci di lavori o richieste di aiuto di vario genere.
+
+\section{Promise}
+La regione attorno alla città di Promise ospita una serie di insediamenti più o meno grandi che convivono senza conflitti. Le persone che si avventurano in questa zona cercano spesso di scappare da qualcosa o qualcuno, alcuni sono ex-schiavi fuggiti dai propri padroni verso una nuova vita, altri sono mercanti ingolositi dalla prospettiva di commerciare senza alcuna restrizione mentre altri sono criminali in cerca di un posto con una moralità più flessibile per poter portare avanti i propri affari.
+
+Il tipo di governo varia di isola in isola ma la Città Libera si affida ad un governo comandato dal Commodoro che si consiglia con i suoi Ammiragli.
+
+A Promise i cittadini sono considerati tutti eguali e non esiste una classe nobiliare, la classe dirigente viene formata in base al merito di ciascuno sia che esso sia di natura militare, commerciale o accademico.
+
+Le isole intorno a Promise hanno un clima Tropicale, d'estate fa molto caldo e c'è una forte umidità ma gli inverni sono molto miti e raramente la temperatura scende sotto lo 0.
+
+Gli abitanti della zona sono sempre felici di incontrare persone dalla "terra ferma", così chiamano chi viene dal continente. Normalmente in cambio di informazioni utili agli affari, notizie sul mondo o pettegolezzi di varia natura si riescono sempre ad ottenere in cambio dritte su chi potrebbe aver lavori o oggetti particolari disponibili.
+
+\section{Franchia}
+Questo regno è nato recentemente, la sua fondazione risale al 1375 DR quando una legione di Hobgoblin conquistò ed occupò una piccola città chiamata Lutetia rendendola la capitale del regno. Sconfitti duramente dall'alleanza delle città della Costa gli Hobgoblin si sono concentrati nella loro espansione verso Nord, premendo contro la regione dello Jutland appartenete al Clan Gjallarhord di Kalsgard.
+
+La regione è governata dal pugno di ferro del suo Re e dal concilio che lo assiste. Tipicamente gli abitanti e le figure di potere tendono a risolvere personalmente i problemi che si presentano o ad ignorarli per poter continuare la espansione del regno nel nome del loro dio Maglubiyet. Non molti avventurieri si recano in questi luoghi se non per compiere missioni di recupero di reperti storici o arcani o per soccorrere mi ricercatori rimasti catturati degli Hobgoblin.
+
+La società è divisa tra nobiltà ed esercito, anche le persone che non combattono direttamente sul campo di battaglia collaborano allo sforzo bellico con il loro lavoro. Ad una analisi più attenta esiste una distinzione in classi non dichiarata che vede gli Hobgoblin alla cima della piramide con i Bugbear sotto ed i Goblin in fondo.
+
+Gli autoctoni del regno guardano con ostilità e sospetto chi arriva da lontano per ficcare il naso nei loro affari e spesso questa ostilità per via della natura e delle credenze degli hobgoblin sfocia in un conflitto fisico in cui spesso i viaggiatori hanno la peggio. 
+
+Per comprendere il loro modo di ragionare è necessario capire che la forza copre un ruolo fondamentale nella società, qualsiasi cosa non sia impiegabile nello sforzo bellico è vista come superflua e di nessun valore. Gli stranieri sono visti spesso come deboli e, a meno che non provino il contrario, privi di ogni diritto.
+
+\chapter{Azir}
+
+\section{Insediamenti principali}
+
+\subsection{Azir}
+\paragraph{Popolazione:} 80.000 abitanti
+
+La capitale del regno. La sua posizione la pone al centro strategico del regno consentendo ai suoi oligarchi uno stretto controllo su tutto ciò che succede.
+La città è strutturata su tre livelli. Fuori dalle mura una enorme distesa di tende e caravanserragli è in cosante movimento, questa è la zona dove risiedono i mercanti in attesa di essere ammessi in città, chi non si può permettere un posto all'interno delle mura e tutta una pletora di truffatori e tagliagole pronti ad approfittarsi di chi non sappia badare a sé stesso.
+Il secondo livello, posto dietro la pria cinta di mura, contiene la parte principale della città. Qui un viaggiatore accorto e facoltoso può trovare una vasta scelta di luoghi per soggiornare. Molte merci vengono scambiate in quest'area ma il prodotto che ha sempre contraddistinto la città sono gli oggetti magici, sia incantati di recente sia antichi, che più o meno lecitamente vengono scambiati nei molti negozi del secondo livello.
+Il terzo anello è posto dietro una seconda più robusta cinta di mura. Protetti da queste solide fortificazioni vivono gli oligarchi che gestiscono la città dalle loro magnifiche dimore. Gli ospiti più influenti da tutti i piani vengono ospitati nelle ambasciate in questa area. Al centro di tutto ciò sorge la "Lancia dorata", una altissima torre perfettamente visibile da ogni angolo della città che funge sia da fortezza che da residenza per i più potenti arcimaghi che governano la città.
+
+\subsection{Ain Bmadia}
+\paragraph{Popolazione:} 17.000 abitanti
+
+Questa città  è stata conquistata agli albori del regno dopo un assedio durato una ventina di anni. Ain Bmadia è una città relativamente piccola ma è pesantemente fortificata. La sua posizione sullo stretto che separa la Costa della spada dal regno di Azir la rende una città strategicamente inestimabile. Viene utilizzata per controllare le navi che trasportano le merci più importanti o pericolose nel regno.
+
+A differenza delle altre città di questo regno non ci sono molti maghi presenti all'interno del palazzo. Il governo è formato da militari che si occupano dell'addestramento delle milizie locali, dell'organizzazione dell'esercito del regno, dell'assegnamento di scorte a navi e carovane sensibili e della gestione delle compagnie mercenarie.
+
+Ain Bmadia possiede un enorme porto dal quale parte una via fortificata che in pochi minuti raggiunge le pendici della collina su cui la città sorge. La cerchia di mura esterne è imponente e difficile da conquistare, contiene il grosso dell'insediamento con le case, i mercati e gli alloggi della guarnigione.
+
+L'attrazione principale della città è l'imponente arena, la più grande del regno, che ogni giorno ospita combattimenti gladiatori e regolamenti di conti tra gli abitanti o i militari, tanti sono i combattimenti che ogni giorno hanno luogo che la sabbia è rimasta permanentemente tinta di rosso.
+
+La cittadella è posta sul punto più alto ed è a sua volta fortificata, contiene lo stato maggiore, i maghi funzionari e la guardia giurata.
+
+\subsection{Merab}
+\paragraph{Popolazione:} 32.000 abitanti
+
+La "Gemma di Azir", un altro nome di questo luogo, viene usata come base di partenza per le carovane che viaggiano nel deserto per condurre affari in tutto il regno.
+
+Il soprannome della città è dovuto alla bellezza degli edifici che la compongono, intarsiati di mosaici e tinti di svariati colori che la rendono avvistabile da molto lontano. Vagando per la città è possibile sostare in rigogliosi giardini pubblici, nelle biblioteche o nei locali in cui ci si può godere un bicchiere di the dopo una dura giornata di lavoro.
+I cittadini di Merab si vantano di non aver rivali nel campo dell'arte culinaria e non perdono mai l'occasione di cercare di dimostrarlo.
+
+Nonostante i rapporti tra le tribù nomadi e gli aziriani siano sempre tesi in questa città vige una silente tregua dove ambo le parti mettono le rivalità da parte per commerciare.
+
+Merab è gestita da funzionari e da alcuni arcimaghi che sono stati assegnati qui per allontanarli dalla capitale.
+
+Sebbene la città sia sotto il regno aziriano e rimanga ufficialmente fedele alla capitale la sua gente preferisce governarsi in maniera autonoma cercando di interpretare più che seguire alcuni ordini che riceve se può trarne vantaggio.
+
+La città è protetta da una semplice cinta di mura che non si è mai rivelata necessaria viste le politiche del governo locale.
+
+L'attrattiva principale è il vasto zoo contenente creature strabilianti ed aliene, provenienti da ogni piano conosciuto.
+
+\subsection{Nemkhem}
+\paragraph{Popolazione:} 31.000 abitanti
+Situata nel punto in cui il fiume Syrne sfocia nel fiume Erabath, il principale corso d'acqua che attraversa tutto il regno.
+
+L'area dove Nemkhem sorge è formata da un insieme di centri abitati che con il tempo di sono espansi fino ad unirsi in una grande città. Alcuni di questi centri hanno delle strutture difensive mentre ed i più recenti si affidano ad essi per ottenere protezione in caso di bisogno.
+
+I primi insediamenti sono stati edificati sopra alcune rovine di una società ormai estinta. La città è il centro più importante dal punto di vista archeologico e da essa provengono la maggior parte degli oggetti magici e degli artefatti rinvenuti dai ricercatori. Una grande accademia si occupa dello studio di questi reperti e dell'analisi delle antiche magie che li permeano.
+
+Da oltre un secolo il cielo attorno alla città è oscurato da una magia che rende il cielo sempre buio come fosse notte. Questa particolarità ha attratto alcune razze che normalmente vivrebbero al buio sottoterra, consentendogli di vivere liberamente all'aperto.
+
+\subsection{Nanosheh}
+\paragraph{Popolazione:} 11.000 abitanti
+
+In questo luogo le tribù di nomadi scoprirono per la prima volta le rovine e gli artefatti appartenuti ad una passata civiltà, alcuni decisero di abbandonare la vita nomade e stanziarsi permanentemente diventando i primi Aziriani.
+
+Numerosi templi sono stati riportati alla luce dedicati ad una divinità che tutti gli oligarchi hanno deciso di seguire per ottenere le loro conoscenze o ampliarle.
+
+Diversamente dal resto dei governi aziriani questo è gestito da un arciprete che governa assistito da alcuni sacerdoti.
+
+La città è integrata nelle rovine di quella precedente creando uno stile architettonico singolare. Nanoshen non possiede mura, vicino ad essa sorge una imponente necropoli che è stata riportata alla luce da cui svettano le cime di alcune imponenti piramidi. Nella necropoli è presente una massiccia forza di soldati non-morti controllati dal regnante della città e dai suoi maghi che vengono impiegati come difesa per la città. Spesso queste creature vengono mandate per tutto il regno come rinforzo alle truppe regolari o sono impiegate come scorta per carichi sensibili.
+
+\subsection{Silil}
+\paragraph{Popolazione:} 17.000 abitanti
+
+Fondata nel 1402 DR Silil è l'insediamento più giovane del regno. La ragione della sua costruzione fu ospitare la accademia della "Luce splendente", un posto nel quale si potessero accogliere le persone più promettenti nelle arti arcane ed addestrarle per metterle al servizio del regno.
+
+La fondazione di questa nuova accademia ha spinto molti mercanti ad insediarsi nella città per importare e vendere vari oggetti magicamente e tecnologicamente avanzati. Questo commercio rese la città celebre all'esterno del regno e presto anche maghi provenienti da altre nazioni iniziarono a frequentare o insegnare alla accademia rendendola un centro all'avanguardia nell'ingegneria, nell'alchimia e nello studio delle arti arcane.
+
+Il governo è gestito dal consiglio formato da maghi e da professori dell'accademia. Una forza mista di mercenari e truppe regolari è assegnata a difesa della città che però nel tempo ha sviluppato numerosi macchinari e dispositivi per assicurarsi la protezione necessaria, creandone ogni giorno di nuovi ed aggiungendoli a quelli esistenti.
+
+\subsection{Kèleth}
+\paragraph{Popolazione:} 6.000
+
+Questa piccola cittadina portuale viene usata come punto di riparazione per la navi che ne hanno bisogno per lunghi periodi di tempo.
+
+L'area in cui Kèleth è collocata è particolarmente fertile rendendola uno dei pochi luoghi in cui vengono coltivati gli alimenti consumati dai cittadini senza affidarsi ai villaggi lungo i fiumi.
+
+La città sorge su una oasi che in precedenza veniva usata come base commerciale per le tribù del deserto finché Azir non ha conquistato il luogo scacciando i nomadi.
+
+Kèleth è gestita da un funzionario del governo aziriano, è protetta da una bassa muraglia sopra terrapieno ed ospita una forza mista di miliziani, mercenari e non-morti.
+
+\subsection{Nedrona}
+\paragraph{Popolazione:} 3.000 abitanti
+
+Questo villaggio deve la sua fama alla maestria degli artigiani che ci vivono. La gilda dei fabbri locale capeggiata da alcuni giganti del fuoco produce le armi migliori del regno.
+
+La comunità degli artigiani è chiusa e riservata, il governo gli impone di vendere i loro prodotti esclusivamente ad acquirenti autorizzati e ciò impedisce al villaggio di prosperare realmente. Non molto di rado però capita che qualche spedizione "sparisca" e nessuno sappia che fine abbia fatto.
+
+Gli artigiani sono protetti da una solida palizzata ed il funzionario locale è affiancato da membri della gilda dei fabbri.
+
+\subsection{Keba}
+\paragraph{Popolazione:} 1.300 abitanti
+
+In quest'isola alcune comunità di allevatori e pescatori vivono tranquillamente. Le loro vite sono dedicate al lavoro ed alla adorazione di una divinità locale in onore della quale è stato eretto un tempio sulla cima dell'isola.
+
+Un gruppo di anziani gestisce el dispute interne e si preoccupa di consegnare un tributo regolare ad Azir per essere lasciati in pace.
+
+\subsection{Gesva}
+\paragraph{Popolazione:} 3.200 abitanti
+
+Quest'isola non fa parte del regno di Azir. Quando gli oligarchi conquistarono il regno chi non poteva opporsi fuggì su quest'isola. Col passare del tempo Azir iniziò ad usare questo luogo come colonia penale dove mandare in esilio personaggi scomodi impossibili da eliminare.
+
+Un senato eletto democraticamente gestisce il villaggio e vive nel timore che un giorno gli oligarchi decida di eliminare l'isola e chi la abita definitivamente.
+
+\section{Gruppi mercenari}
+Il regno di Azir non vanta una grande tradizione militare, per questa ragione lo stato si avvale spesso dell'aiuto di compagnie mercenarie. A questa necessità si aggiunge il bisogno da parte di alcuni mercanti di ottenere delle scorte efficienti per i propri carichi o quello di altre persone potenti di trovare persone discrete ed affidabili per svolgere alcuni delicati lavori.
+
+\subsection{La guardia cremisi}
+\paragraph{Forza:} 4.000 unità
+
+Principale gruppo mercenario del paese, hanno stretto un accordo con i governi con cui collaborano che gli consente di arruolare i ragazzi rimasti orfani o che trovano sulla strada per poi addestrarli.
+
+I membri più giovani della compagnia sono costretti a lavorare ed allenarsi duramente in cambio solo di vitto ed alloggio finché non dimostrino di essere meritevoli compiendo una impresa sufficientemente rischiosa o proficua. 
+
+Tra i loro ranghi oltre agli arruolati forzati accolgono chiunque si offra e dimostri di essere capace e spietato.
+
+L'attuale leader, Arsen Zadian (LE Goliath \textbf{Champion}), rimane fedele al regno di Azir. Arsen pensa che i maghi che gestiscono la vita quotidiana del regno facciano un pessimo lavoro ma visto che la sua compagnia viene impiegata per risolvere questi problemi si guarda bene dall'esternare i suoi pensieri a riguardo.
+
+\subsection{I burattini di Orcus}
+\textbf{Forza:} 600 unità
+
+Un negromante giunto ad Azir iniziò a studiare per migliorare le sue abilità sempre di più ed assoldò una compagnia di avventurieri per proteggerlo in una spedizione in una necropoli. Durante la spedizione lui ed i suoi uomini furono massacrati ma prima di compiere il suo trapasso il negromante invocò Orcus chiedendogli di poter rimanere in vita come suo servitore. 
+
+Il principe dei demoni accettò la supplica e lo fece tornare in vita in una nuova forma e con il potere di sollevare un grande numero di soldati per servirlo.
+
+Da quel momento chiunque avesse bisogno di risolvere una questione sterminando i propri nemici può stringere un accordo con l'ex negromante, ora leader dei Burattini di Orcus, Vraduq (NE \textbf{Skull Lord}). Una cosa che pochi sanno è che alle persone uccise dai burattini viene offerta una nuova vita come burattini al servizio di Orcus.
+
+\subsection{Lo scudo del viandante}
+\textbf{Forza:} 250 unità
+
+Questi mercenari si possono trovare in tutti i porti del regno, offrono i loro servizi ai mercanti scortandoli e guidandoli nel deserto.
+La leader del gruppo è Dornitain Icesunder (LN Duergar \textbf{Duergar Warlord}) una Duergar che stufa di vivere con la sua colonia ha sfidato la luce del sole per vivere nuove avventure e fare profitto. 
+
+Anche se i membri sono sparsi nelle città nessuno si sognerebbe di non versare la propria quota a Dornitain o di derubare dei viaggiatori che avevano accordato di aiutare ben consci della fulminea dell'ira della Duergar che inevitabilmente li colpirebbe. Ciò li ha rapidamente resi una compagnia fidata e consigliata per chi intraprende i suoi primi viaggi nel deserto.
+
+
+\section{Possibili missioni}
+
+\chapter{Tribù del deserto}
+Una parte importante del territorio di Azir sono le tribù che da sembre viaggiano nel deserto. Capita che queste tribù si uniscano, separino o spariscano nel deserto rendendo la loro catalogazione difficile. Al momento in cui il manuale è ambientato queste sono alcune delle principali tribù.
+
+\section{La via Comune}
+\paragraph{Membri stimati:} 2.600 persone
+
+Difficile non notare il passaggio di questa carovana, il suo arrivo è annunciato da un enorme polverone alzato dalla marcia di tutte le persone, dei carri e delle bestie che li trainano. Quando si stabiliscono per passare la notte sembrano un normale villaggio ad un occhio inesperto. 
+
+Quando marciano mantengono un ordine preciso, per primi ci sono alcuni guerrieri ed esploratori, questi sono seguiti dalle enormi bestie che trasportano i palazzi dove i membri più ricchi della carovana risiedono, dopo di essi vengono i mercanti e gli artigiani ed infine, in coda alla carovana, i lavoratori più poveri o chi si aggrega per avere un riferimento da seguire nel deserto. 
+
+Gli edifici mobili dei mercanti più ricchi fanno sempre un certo effetto a chi li vede per la prima volta. Montate su impalcature trasportate sulla schiena di enormi olifanti, su queste strutture sono stati lanciati degli incantesimi che gli consentono di ospitare al loro interno spazi molto più ampi di quanto sarebbe ragionevole immaginare rendendole dei piccoli palazzi mobili.
+
+La carovana si sposta per commerciare da un punto all'altro del regno ma le persone facoltose non sono tutte mercanti, un eccentrica arcimaga di nome Lena Pakradouni (NG Summer-Eladrin \textbf{Archmage}) segue la carovana con la sua carrozza in stile vittoriano apprezzando il calore del deserto e la sua quiete ed andando a dormire in un suo piano personale.
+
+\section{Vento di luce}
+\paragraph{Membri stimati:} 800 persone
+
+Numerose delle storie di persone date per morte o disperse nel deserto che trovano un lieto fine contengono il nome di questa tribù. Il loro interesse è continuare a spostarsi seguendo segni invisibili che i saggi sono in grado di interpretare, convinti che li porteranno dove ci sarà bisogno di loro. Non è raro che una spedizione di giovani avventurieri o inesperti maghi teletrasportatisi nel deserto per errore vengano portati in salvo da questo gruppo.
+
+A causa di questa loro vocazione spesso si trovano a soccorrere chi è stato trasportato nel deserto aziriano da altri piani a causa della magia degli oligarchi, ciò fa ci che in questa tribù si possano vedere razze o creature che sarebbe impossibile vedere in ogni altra parte del mondo che decidono di rimanere ad aiutare cercando un modo per poter tornare a casa.
+
+Il loro leader attuale, Xemnon Occhiod'ambra (CG Leonin \textbf{Druid of the Old Ways}) è sempre più preoccupato per la quantità di entità provenienti da altri universi che sta sfociando nel deserto ed ha iniziato a mandare i suoi guerrieri e studiosi migliori fuori dal deserto per allertare le altre nazioni e cercare di forgiare alleanze in grado di porre fine allo strapotere degli oligarchi.
+
+\section{Gli scorpioni delle sabbie}
+\paragraph{Membri stimati:} 300 persone
+
+Considerati dei criminali dal governo aziriano, questa schiera di beduini a cammello si differenzia dai gruppi mercenari per il suo rifiuto nel servire gli oligarchi cercando di compiere furti o scorrerie ai loro danni.
+
+Gli scorpioni sono gestiti da quello che viene ritenuto il membro più meritevole del titolo ed attualmente costui è Mugorin Baboian (CN Orc \textbf{Assassin}).
+
+\section{Le radici del sole}
+\paragraph{Membri stimati:} 80 persone
+
+Un gruppo di monaci e chierici devoti a Pelor, la loro missione è intervenire quando una creatura malvagia viene evocata nel deserto e cercare di richiudere gli eventuali varchi che essa potrebbe aver creato verso il suo regno.
+Le radici del sole sono guidate da padre Kyrim Rajabov (LG Gold Dragonborn \textbf{War Priest}).
+
+\chapter{Kalsgard}
+\section{Kalsgard}
+\section{Siste Festning}
+\section{Siste Klintr}
+\section{Upsala}
+\section{Skjult Borg}
+\section{Fìnnbol}
+
+\chapter{Città costiere}
+\section{Baldur's Gate}
+\section{Neverwinter}
+\textbf{Popolazione:} 16.000 abitanti
+
+Conosciuta come la "Città delle abili mani" o come il "Gioiello del Nord", Neverwinter è una città cosmopolita, fa parte dell'alleanza dei Lord ed è governata da Lord Dagult Neveremember.
+
+La città deve il suo nome al suo clima particolare che la rende mite nonostante la sua posizione molto a Nord. Le acque del fiume sono così calde che il porto non ghiaccia nemmeno di inverno. Gli abitanti, persone semplici ma laboriose, provano un grande orgoglio verso i maestosi giardini pubblici della città che si sforzano di mantenere sempre perfetti aiutati dal particolare clima che li mantiene sempre verdi e rigogliosi.
+
+In passato sul fiume che attraversa la città erano stati posti tre ponti che i cittadini nel tempo hanno lavorato e scolpito fino a renderli delle opere d'arte. Di questi ponti ad oggi ne sopravvive solo uno, il cosiddetto Ponte della viverna.
+
+Nel 1451 DR una tragedia travolse la città quando il vicino monte Hotenow eruttò cancellando al maggior parte della area circostante. I danni furono incalcolabili ed una porzione di città sprofondò nel sottosuolo aprendo una voragine dalla quale emersero orribili creature che compirono una strage dei sopravvissuti.
+Gli abitanti della città non accettarono l'idea di abbandonare le loro case e decisero di rimanere, con un alto costo di vite umane la voragine fu magicamente richiusa e la ricostruzione poté iniziare.
+
+Gli anni che si susseguirono furono duri ma gli abitanti, grazie al loro carattere resiliente e laborioso, riuscirono a salvare la maggior parte della città, riparando uno dei tre ponti crollati riallacciando le due metà del fiume.
+
+
+\section{Egorian}
+\section{Luskan}
+\section{Waterdeep}
+\section{Kraighammer}
+
+\chapter{Promise}
+\section{Promise}
+\section{Herath}
+\section{Zir'Hadil}
+\section{Morgala}
+\section{Isola del folle Gurr}
+\section{Mulino a vento di Zalathora}
+\section{Stakhaus}
+\section{Ghilland}
+\section{Vulcano Kegala}
+\section{Quartier generale delle Anime Galleggianti}
+
+\chapter{Franchia}
+\section{Lutetia}
+
+\chapter{Sections}
+
+\DndDropCapLine{T}{his package is designed to aid you in} writing beautifully typeset documents for the fifth edition of the world's greatest roleplaying game. It starts by adjusting the section formatting from the defaults in \LaTeX{} to something a bit more familiar to the reader. The chapter formatting is displayed above.
+
+\section{Section}
+Sections break up chapters into large groups of associated text.
+
+\subsection{Subsection}
+Subsections further break down the information for the reader.
+
+\subsubsection{Subsubsection}
+Subsubsections are the furthest division of text that still have a block header. Below this level, headers are displayed inline.
+
+\paragraph{Paragraph}
+The paragraph format is seldom used in the core books, but is available if you prefer it to the ``normal'' style.
+
+\subparagraph{Subparagraph}
+The subparagraph format with the paragraph indent is likely going to be more familiar to the reader.
+
+\section{Special Sections}
+The module also includes functions to aid in the proper typesetting of multi-line section headers: |\DndFeatHeader| for feats, |\DndItemHeader| magic items and traps, and |\DndSpellHeader| for spells.
+
+\DndFeatHeader{Typesetting Savant}[Prerequisite: \LaTeX{} distribution]
+You have acquired a package which aids in typesetting source material for one of your favorite games. You have advantage on Intelligence checks to typeset new content. On a failed check, you can ask questions online at the package's website.
+
+\DndItemHeader{Foo's Quill}{Wondrous item, rare}
+This quill has 3 charges. While holding it, you can use an action to expend 1 of its charges. The quill leaps from your hand and writes a contract applicable to your situation.
+
+The quill regains 1d3 expended charges daily at dawn.
+
+\DndSpellHeader%
+  {Beautiful Typesetting}
+  {4th-level illusion}
+  {1 action}
+  {5 feet}
+  {S, M (ink and parchment, which the spell consumes)}
+  {Until dispelled}
+You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
+
+While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
+
+\section{Map Regions}
+The map region functions |\DndArea| and |\DndSubArea| provide automatic numbering of areas.
+
+\DndArea{Village of Hommlet}
+This is the village of hommlet.
+
+\DndSubArea{Inn of the Welcome Wench}
+Inside the village is the inn of the Welcome Wench.
+
+\DndSubArea{Blacksmith's Forge}
+There's a blacksmith in town, too.
+
+\DndArea{Foo's Castle}
+This is foo's home, a hovel of mud and sticks.
+
+\DndSubArea{Moat}
+This ditch has a board spanning it.
+
+\DndSubArea{Entrance}
+A five-foot hole reveals the dirt floor illuminated by a hole in the roof.
+
+\chapter{Text Boxes}
+
+The module has three environments for setting text apart so that it is drawn to the reader's attention. |DndReadAloud| is used for text that a game master would read aloud.
+
+\begin{DndReadAloud}
+  As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
+\end{DndReadAloud}
+
+\section{As an Aside}
+The other two environments are the |DndComment| and the |DndSidebar|. The |DndComment| is breakable and can safely be used inline in the text.
+
+\begin{DndComment}{This Is a Comment Box!}
+  A |DndComment| is a box for minimal highlighting of text. It lacks the ornamentation of |DndSidebar|, but it can handle being broken over a column.
+\end{DndComment}
+
+The |DndSidebar| is not breakable and is best used floated toward a page corner as it is below.
+
+\begin{DndSidebar}[float=!b]{Behold the DndSidebar!}
+  The |DndSidebar| is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+\end{DndSidebar}
+
+\section{Tables}
+The |DndTable| colors the even rows and is set to the width of a line by default.
+
+\begin{DndTable}[header=Nice Table]{XX}
+    \textbf{Table head}  & \textbf{Table head} \\
+    Some value  & Some value \\
+    Some value  & Some value \\
+    Some value  & Some value
+\end{DndTable}
+
+\chapter{Monsters and NPCs}
+
+% Monster stat block
+\begin{DndMonster}[float*=b,width=\textwidth + 8pt]{Monster Foo}
+  \begin{multicols}{2}
+    \DndMonsterType{Medium aberration (metasyntactic variable), neutral evil}
+
+    % If you want to use commas in the key values, enclose the values in braces.
+    \DndMonsterBasics[
+        armor-class = {9 (12 with \emph{mage armor})},
+        hit-points  = {\DndDice{3d8 + 3}},
+        speed       = {30 ft., fly 30 ft.},
+      ]
+
+    \DndMonsterAbilityScores[
+        str = 12,
+        dex = 8,
+        con = 13,
+        int = 10,
+        wis = 14,
+        cha = 15,
+      ]
+
+    \DndMonsterDetails[
+        %saving-throws = {Str +0, Dex +0, Con +0, Int +0, Wis +0, Cha +0},
+        %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
+        %damage-vulnerabilities = {cold},
+        %damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
+        %damage-immunities = {poison},
+        %condition-immunities = {poisoned},
+        senses = {darkvision 60 ft., passive Perception 10},
+        languages = {Common, Goblin, Undercommon},
+        challenge = 1,
+      ]
+    % Traits
+    \DndMonsterAction{Innate Spellcasting}
+    Foo's spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+    \begin{DndMonsterSpells}
+      \DndInnateSpellLevel{misty step}
+      \DndInnateSpellLevel[3]{fog cloud, rope trick}
+      \DndInnateSpellLevel[1]{identify}
+    \end{DndMonsterSpells}
+
+    \DndMonsterAction{Spellcasting}
+    Foo is a 2nd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following sorcerer spells prepared:
+    \begin{DndMonsterSpells}
+      \DndMonsterSpellLevel{blade ward, fire bolt, light, shocking grasp}
+      \DndMonsterSpellLevel[1][3]{burning hands, mage armor, shield}
+    \end{DndMonsterSpells}
+
+    \DndMonsterSection{Actions}
+    \DndMonsterAction{Multiattack}
+    The foo makes two melee attacks.
+
+    %Default values are shown commented out
+    \DndMonsterAttack[
+      name=Dagger,
+      %distance=both, % valid options are in the set {both,melee,ranged},
+      %type=weapon, %valid options are in the set {weapon,spell}
+      mod=+3,
+      %reach=5,
+      %range=20/60,
+      %targets=one target,
+      dmg=\DndDice{1d4+1},
+      dmg-type=piercing,
+      %plus-dmg=,
+      %plus-dmg-type=,
+      %or-dmg=,
+      %or-dmg-when=,
+      %extra=,
+    ]
+
+    %\DndMonsterMelee calls \DndMonsterAttack with the melee option
+    \DndMonsterMelee[
+      name=Flame Tongue Longsword,
+      mod=+3,
+      %reach=5,
+      %targets=one target,
+      dmg=\DndDice{1d8+1},
+      dmg-type=slashing,
+      plus-dmg=\DndDice{2d6},
+      plus-dmg-type=fire,
+      or-dmg=\DndDice{1d10+1},
+      or-dmg-when=if used with two hands,
+      %extra=,
+    ]
+
+    %\DndMonsterRanged calls \DndMonsterAttack with the ranged option
+    \DndMonsterRanged[
+      name=Assassin's Light Crossbow,
+      mod=+1,
+      range=80/320,
+      dmg=\DndDice{1d8},
+      dmg-type=piercing,
+      %plus-dmg=,
+      %plus-dmg-type=,
+      %or-dmg=,
+      %or-dmg-when=,
+      extra={, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one}
+    ]
+
+    % Legendary Actions
+    \DndMonsterSection{Legendary Actions}
+    The foo can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The foo regains spent legendary actions at the start of its turn.
+
+    \begin{DndMonsterLegendaryActions}
+      \DndMonsterLegendaryAction{Move}{The foo moves up to its speed.}
+      \DndMonsterLegendaryAction{Dagger Attack}{The foo makes a dagger attack.}
+      \DndMonsterLegendaryAction{Create Contract (Costs 3 Actions)}{The foo presents a contract in a language it knows and waves it in the face of a creature within 10 feet. The creature must make a DC 10 Intelligence saving throw. On a failure, the creature is incapacitated until the start of the foo's next turn. A creature who cannot read the language in which the contract is written has advantage on this saving throw.}
+    \end{DndMonsterLegendaryActions}
+  \end{multicols}
+\end{DndMonster}
+
+The |DndMonster| environment is used to typeset monster and NPC stat blocks. The module supplies many functions to easily typeset the contents of the stat block
+
+\chapter{Colors}
+
+\begin{table*}[b]%
+  \caption{}\label{tab:colors}
+
+  \begin{DndTable}[width=\linewidth,header=Colors Supported by This Package]{lX}
+    \textbf{Color}                  & \textbf{Description} \\
+    |PhbLightGreen|                 & Light green used in PHB Part 1 (Default) \\
+    |PhbLightCyan|                  & Light cyan used in PHB Part 2 \\
+    |PhbMauve|                      & Pale purple used in PHB Part 3 \\
+    |PhbTan|                        & Light brown used in PHB appendix \\
+    |DmgLavender|                   & Pale purple used in DMG Part 1 \\
+    |DmgCoral|                      & Orange-pink used in DMG Part 2 \\
+    |DmgSlateGray| (|DmgSlateGrey|) & Blue-gray used in PHB Part 3 \\
+    |DmgLilac|                      & Purple-gray used in DMG appendix \\
+  \end{DndTable}
+\end{table*}
+
+This package provides several global color variables to style |DndComment|, |DndReadAloud|, |DndSidebar|, and |DndTable| environments.
+
+\begin{DndTable}[header=Box Colors]{lX}
+  \textbf{Color}   & \textbf{Description} \\
+  |commentcolor|   & |DndComment| background \\
+  |readaloudcolor| & |DndReadAloud| background \\
+  |sidebarcolor|   & |DndSidebar| background \\
+  |tablecolor|     & background of even |DndTable| rows \\
+\end{DndTable}
+
+They also accept an optional color argument to set the color for a single instance. See Table~\ref{tab:colors} for a list of core book accent colors.
+
+\begin{lstlisting}
+\begin{DndTable}[color=PhbLightCyan]{cX}
+  \textbf{d8} & \textbf{Item} \\
+  1 & Small wooden button \\
+  2 & Red feather \\
+  3 & Human tooth \\
+  4 & Vial of green liquid \\
+  6 & Tasty biscuit \\
+  7 & Broken axe handle \\
+  8 & Tarnished silver locket \\
+\end{DndTable}
+\end{lstlisting}
+
+\begin{DndTable}[color=PhbLightCyan]{cX}
+  \textbf{d8} & \textbf{Item} \\
+  1 & Small wooden button \\
+  2 & Red feather \\
+  3 & Human tooth \\
+  4 & Vial of green liquid \\
+  6 & Tasty biscuit \\
+  7 & Broken axe handle \\
+  8 & Tarnished silver locket \\
+\end{DndTable}
+
+\section{Themed Colors}
+Use |\DndSetThemeColor[<color>]| to set |commentcolor|, |readaloudcolor|, |sidebarcolor|, and |tablecolor| to a specific color. Calling |\DndSetThemeColor| without an argument sets those colors to the current |themecolor|. In the following example the group limits the change to just a few boxes; after the group finishes, the colors are reverted to what they were before the group started.
+
+\begin{lstlisting}
+\begingroup
+\DndSetThemeColor[PhbMauve]
+
+\begin{DndComment}{This Comment Is in Mauve}
+  This comment is in the the new color.
+\end{DndComment}
+
+\begin{DndSidebar}{This Sidebar Is Also Mauve}
+  The sidebar is also using the new theme color.
+\end{DndSidebar}
+\endgroup
+\end{lstlisting}
+
+\begingroup
+\DndSetThemeColor[PhbMauve]
+
+\begin{DndComment}{This Comment Is in Mauve}
+  This comment is in the the new color.
+\end{DndComment}
+
+\begin{DndSidebar}{This Sidebar Is Also Mauve}
+  The sidebar is also using the new theme color.
+\end{DndSidebar}
+\endgroup
+
+\end{document}
